@@ -157,6 +157,7 @@ return {
           dotfiles = true,
           custom = {
             "node_modules/.*",
+            "venv/.*",
           },
         },
         log = {
