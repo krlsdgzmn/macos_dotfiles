@@ -5,6 +5,9 @@
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- Remap b to w
+vim.keymap.set("n", "w", "b")
+
 -- Split window
 vim.keymap.set("n", "ws", ":split<Return>", { noremap = true, silent = true })
 vim.keymap.set("n", "wv", ":vsplit<Return>", { noremap = true, silent = true })
