@@ -8,6 +8,7 @@ return {
       catppuccin.setup({
         flavour = "auto",
         transparent_background = true,
+        term_colors = true,
       })
       vim.cmd.colorscheme("catppuccin-mocha")
     end,
