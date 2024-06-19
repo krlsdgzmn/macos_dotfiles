@@ -27,6 +27,3 @@ vim.keymap.set("n", "sj", "<C-W>-")
 -- Open terminal
 vim.api.nvim_set_keymap("n", "<Leader>t", ":sp | :terminal<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>rt", ":vsp | :terminal<CR>", { noremap = true, silent = true })
-
--- Toggle copilot
-vim.api.nvim_set_keymap("n", "<Leader>cp", ":Copilot toggle<CR>", { noremap = true, silent = true })
