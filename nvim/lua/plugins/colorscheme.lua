@@ -1,10 +1,11 @@
 return {
   {
     "catppuccin/nvim",
-    as = "catppuccin",
+    lazy = false,
+    name = "catppuccin",
+    priority = 1000,
     config = function()
       local catppuccin = require("catppuccin")
-
       catppuccin.setup({
         flavour = "auto",
         transparent_background = true,
