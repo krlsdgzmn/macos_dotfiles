@@ -27,3 +27,7 @@ vim.keymap.set("n", "sj", "<C-W>-")
 -- Open terminal
 vim.api.nvim_set_keymap("n", "<Leader>t", ":sp | :terminal<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>rt", ":vsp | :terminal<CR>", { noremap = true, silent = true })
+
+-- Move higlighted text with J and K
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
