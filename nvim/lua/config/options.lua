@@ -3,7 +3,7 @@
 -- Add any additional options here
 
 vim.opt.path:append({ "**" })
-vim.opt.wildignore:append({ "*/node_modules/*", "*/venv/*" })
+vim.opt.wildignore:append({ "*/node_modules/*", "*/.venv/*" })
 
 -- turn off mouse
 vim.opt.mouse = ""
