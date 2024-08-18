@@ -28,13 +28,12 @@ require("lazy").setup({
     lazy = false,
     version = false,
   },
-  install = { colorscheme = { "sonokai", "catppuccin" } },
   checker = { enabled = true },
   performance = {
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
-        "gzip",
+        -- "gzip",
         -- "matchit",
         -- "matchparen",
         "netrwPlugin",

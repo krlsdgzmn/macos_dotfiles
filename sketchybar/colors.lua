@@ -11,7 +11,7 @@ return {
 	transparent = 0x00000000,
 
 	bar = {
-		bg = 0x902c2e34,
+		bg = 0xcc12192a,
 		border = 0x9f2c2e34,
 	},
 	popup = {
