@@ -3,18 +3,18 @@
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
-yabai -m config external_bar all:45:0 \
-  mouse_follows_focus off \
-  focus_follows_mouse off \
-  window_zoom_persist off \
+yabai -m config external_bar all:0:38 \
+  mouse_follows_focus on \
+  focus_follows_mouse on \
+  window_zoom_persist on \
   window_placement second_child \
   window_shadow float \
   window_opacity on \
-  window_opacity_duration 0.2 \
-  active_window_opacity 0.75 \
-  normal_window_opacity 0.8 \
-  window_animation_duration 0.015 \
-  window_animation_easing ease_out_quad \
+  window_opacity_duration 0.3 \
+  active_window_opacity 0.96 \
+  normal_window_opacity 0.7 \
+  window_animation_duration 0.3 \
+  window_animation_easing ease_out_circ \
   insert_feedback_color 0xff9dd274 \
   split_ratio 0.50 \
   auto_balance off \
@@ -29,18 +29,8 @@ yabai -m config external_bar all:45:0 \
   right_padding 8 \
   window_gap 8
 
-# Exclude problematic apps from being managed:
-yabai -m rule --add app="^(Finder|Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor)$" manage=off
-yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
-yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
-yabai -m rule --add label="Media Viewer" app="Messenger" title="Media Viewer" manage=off
-yabai -m rule --add label="Little Arc — Google" app="Arc" title="Little Arc — Google" manage=off
-# yabai -m rule --add label="Messenger Call" app="Messenger" title="Messenger Call" manage=off
-yabai -m rule --add label="New Tab" app="Google Chrome" title="New Tab" manage=off
-yabai -m rule --add label="Untitled" app="Stickies" title="untitled" manage=off
-yabai -m rule --add label="UTM" app="UTM" title="UTM" manage=off
-
+yabai -m rule --add app="^(Stickies|Media Viewer|About This Mac|Finder|Little Arc — Google|Stickies|Microsoft Word|Finder|Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor|Preview)$" manage=off layer=below
+yabai -m rule --add app="^Arc" opacity=1.0
 yabai -m config layout bsp
 
 echo "yabai configuration loaded.."

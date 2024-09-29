@@ -7,24 +7,11 @@ vim.keymap.set("n", "x", '"_x')
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- Remap b to w
--- vim.keymap.set("n", "w", "b")
-
--- Split window
-vim.keymap.set("n", "ws", ":split<Return>", { noremap = true, silent = true })
-vim.keymap.set("n", "wv", ":vsplit<Return>", { noremap = true, silent = true })
-
--- Move window
-vim.keymap.set("n", "wh", "<C-w>h")
-vim.keymap.set("n", "wk", "<C-w>k")
-vim.keymap.set("n", "wj", "<C-w>j")
-vim.keymap.set("n", "wl", "<C-w>l")
-
 -- Resize window
-vim.keymap.set("n", "sl", "<c-w>5<")
-vim.keymap.set("n", "sh", "<c-w>5>")
-vim.keymap.set("n", "sk", "<C-W>+")
-vim.keymap.set("n", "sj", "<C-W>-")
+vim.keymap.set("n", "wl", "<c-w>5<")
+vim.keymap.set("n", "wh", "<c-w>5>")
+vim.keymap.set("n", "wk", "<C-W>+")
+vim.keymap.set("n", "wj", "<C-W>-")
 
 -- Open terminal
 vim.api.nvim_set_keymap("n", "<Leader>t", ":sp | :terminal<CR>", { noremap = true, silent = true })
